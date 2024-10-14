@@ -1,0 +1,52 @@
+.container-portada{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+}
+
+.portada-imagenes{
+    display: flex;
+    background-image:url(https://images03.nicepagecdn.com/c461c07a441a5d220e8feb1a/ac25187c1a485aec9c28f792/v.jpg?version=);
+    width: 600px;
+    height:80%;
+    background-size: cover;
+    position: relative;
+}
+
+.img-portada{
+    display:flex;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: -150px;
+    bottom: 0;
+}
+
+.portada-texto{
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+    width: 35%;
+    height: 80%;
+    text-align: left;
+
+    && h1{
+        width: 60%;
+        font-size: 50px;
+        font-family: var(--raleway)
+    }
+
+    && p{
+        font-family: var(--opensans);
+        width: 80%;
+        line-height: 2.5;
+        color: grey;
+        font-style: italic;
+    }
+}
+

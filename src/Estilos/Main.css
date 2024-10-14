@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --purple: #2b253c;
+    --black : #000000;
+    --yellow : #f1c50e
+    --font-size: 16px;
+    --openSans : "Open Sans", sans-serif;
+    --raleway : "Raleway", sans-serif;
+    --oswald : "Oswald", sans-serif;
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+.boton{
+    width: 250px;
+    height: 60px;
+    background-color: var(--purple);
+    font-family: var(--openSans);
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+
+    &&:hover{
+        background-color:#f1c50e;
+        transition: all .5s ease-in;
+    }
+}
+
+h1,h2,h3, p{
+    font-family: var(--openSans);
+    padding: 0;
+    margin: 0;
+}
+
