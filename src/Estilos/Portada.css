@@ -10,7 +10,7 @@
 .portada-imagenes{
     display: flex;
     background-image:url(https://images03.nicepagecdn.com/c461c07a441a5d220e8feb1a/ac25187c1a485aec9c28f792/v.jpg?version=);
-    width: 600px;
+    width: 30%;
     height:80%;
     background-size: cover;
     position: relative;
