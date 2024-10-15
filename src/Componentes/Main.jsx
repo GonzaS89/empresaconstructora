@@ -2,6 +2,7 @@ import React from 'react';
 import '../Estilos/Main.css';
 import { Portada } from './Portada';
 import { Servicios } from './Servicios';
+import { Nosotros } from './Nosotros';
 
 
 export const Main = () => {
@@ -9,6 +10,7 @@ export const Main = () => {
     <div className="Main">
         <Portada />
         <Servicios />
+        <Nosotros />
     </div>
   )
 }
