@@ -12,8 +12,7 @@
     justify-content: space-evenly;
     background-color: var(--purple);
     color: white;
-    height:900px;
-    font-style: italic;
+    height:800px;
 
     && h1{
         font-size:50px;
@@ -35,15 +34,15 @@
 
 
 .container-tiposdeservicios{
-    width: 65%;
+    width: 55%;
     display: flex;
     gap: 30px;
     justify-content:space-evenly;
 }
 
 .container-servicio{
-    width: 420px;
-    height:420px;
+    width: 350px;
+    height:350px;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
@@ -53,17 +52,20 @@
 
     && p{
         font-size:15px;
+        width: 85%;
         font-weight:400
     }
     && h2{
         font-family: var(--raleway);
-        font-weight: 600;
+        font-weight: 500;
+        font-style: italic;
+        font-size:20px
     }
 }
 
 .img-servicio{
-    width: 100px;
-    height:100px;
+    width: 80px;
+    height:80px;
 }
 
 .container-masservicios{
