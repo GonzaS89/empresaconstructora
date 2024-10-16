@@ -5,7 +5,9 @@
     align-items: center;
 }
 
+
 .tiposdeservicios{
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +15,7 @@
     background-color: var(--purple);
     color: white;
     height:800px;
+    
 
     && h1{
         font-size:50px;
@@ -20,6 +23,7 @@
         width: 50%;
         text-align: center;
         font-weight: 400;
+        filter: opacity(0);
     }
 
     && p{
@@ -29,8 +33,36 @@
         font-family: var(--openSans);
         font-weight:100;
         font-style: italic;
+        filter: opacity(0);
     }
-}    
+}  
+
+.titulo-tiposervicios,.texto-tiposervicios{
+    filter: opacity(1);
+}
+
+.tituloservicios-animado{
+    animation: tituloanimado 1s ease-out forwards;
+}
+
+@keyframes tituloanimado {
+    from{filter: opacity(0); transform: scale(0);}
+    to{filter: opacity(1); transform: scale(1);}
+}
+
+.textoservicios-animado{
+    animation: textoanimado 1s .5s ease-out forwards;
+}
+
+@keyframes textoanimado {
+    from{filter: opacity(0); transform: scale(0);}
+    to{filter: opacity(1); transform: scale(1);}
+}
+
+.visible{
+    filter: opacity(1);
+}
+
 
 
 .container-tiposdeservicios{
@@ -38,7 +70,19 @@
     display: flex;
     gap: 30px;
     justify-content:space-evenly;
+    filter: opacity(0);
 }
+
+.tipodeserviciosanimado{
+    animation: serviciosanimados 1s 1s ease-out forwards;
+}
+
+@keyframes serviciosanimados {
+    from{filter: opacity(0); transform: translateY(100%);}
+    to{filter: opacity(1); transform: translateY(0);}
+}
+
+
 
 .container-servicio{
     width: 350px;
@@ -53,7 +97,8 @@
     && p{
         font-size:15px;
         width: 85%;
-        font-weight:400
+        font-weight:400;
+        filter: opacity(1);
     }
     && h2{
         font-family: var(--raleway);
@@ -74,6 +119,7 @@
     background-color: white;
     color: black;
     width: 65%;
+    overflow: hidden;
 }
 
 .container-servicios_texto{
@@ -86,6 +132,7 @@
 
 .titulo-info{
     margin-top: 50px;
+    filter: opacity(0);
     && h1{
         font-size: 50px;
         font-family: var(--raleway);
@@ -110,6 +157,7 @@
     && h3{
         font-size: 35px;
         font-weight: 200;
+        
     }
 
     && p {
@@ -119,7 +167,26 @@
     }
 }
 
+.entradadetextoporizquierda{
+    animation: entradatxtizq 1s ease-out forwards;
+}
+
+.entradadetextoporderecha{
+    animation: entradatxtder 1s ease-out forwards;
+}
+
+@keyframes entradatxtizq{
+    from {filter: opacity(0); transform:translateX(-100%)}
+    to {filter: opacity(1); transform:translateX(0%)}
+}
+
+@keyframes entradatxtder{
+    from {filter: opacity(0); transform:translateX(100%)}
+    to {filter: opacity(1); transform:translateX(0%)}
+}
+
 .listadeservicios{
+    filter: opacity(0);
     && p{
         font-weight: 400;
     }
@@ -131,12 +198,14 @@
         color: grey;
         width: 80%;
         padding-left: 10px;
+        
     }
 }
 
 .container-botones_info{
     display: flex;
     width: 20%;
+    
     
 }
 
@@ -145,4 +214,5 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    filter: opacity(0);
 }

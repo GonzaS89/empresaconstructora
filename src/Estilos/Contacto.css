@@ -1,0 +1,108 @@
+.container-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    height: 750px;
+    background-image: linear-gradient(0deg, rgba(43,37,60,0.85), rgba(43,37,60,0.85)), url('//images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/e10b49165d2c5fe1ab8b208f/klklu8-min.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  color: white;
+
+  && h1 {
+    font-size: 50px;
+    font-weight:400;
+    font-family: var(--raleway);
+  }
+}
+
+.container-datos-formulario{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+}
+
+.minicontainer-info{
+    && p{
+        text-align:left;
+        padding-top: 15px;
+        width: 90%;
+        text-transform: uppercase;
+    }
+}
+
+.contacto-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-contacto{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono-contacto{
+    font-size: 30px;
+    color: #f1c50e;
+}
+
+.contacto-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+.mail-nombre{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.mail, .nombre, .direccion, .cuadromensaje{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 50%;
+
+    && input, textarea{
+        width: 100%;
+        padding: 10px;
+
+        &&::placeholder{
+            font-family: var(--raleway);
+            font-size: 15px;
+        }
+    }
+
+    && label{
+        font-weight: bold;
+    }
+
+    && textarea{
+        height: 200px;
+    }
+}
+
+
+
+
+.input-mail-nombre, .input-direccion{
+    height: 50px;
+    width: 250px;
+}
+
+.botonform{
+    background-color: #f1c50e;
+    height:60px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-family: var(--openSans);
+    font-size: 15px;
+    font-weight: bold;
+}

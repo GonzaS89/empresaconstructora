@@ -1,7 +1,7 @@
 .nosotros-caracteristicas{
     display: flex;
     justify-content: center;
-    height: 850px;
+    height: 750px;
     width: 100%;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(https://images02.nicepagecdn.com/c461c07a441a5d220e8feb1a/5bfc19b74fed57909fa0a5e8/edf-min.jpg);
     background-size: cover;
@@ -26,8 +26,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 380px;
-    height: 320px;
+    width: 350px;
+    height: 300px;
     border-radius: 10px;
     background-color: white;
     font-family: var(--openSans);
@@ -39,7 +39,6 @@
     }
 
     && p{
-        font-size: 20px;
         line-height: 1.5;
         width: 95%;
     }
@@ -50,9 +49,84 @@
     color: white;
 }
 
-.titulogrande{
+.container-mascaracteristicas{
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
 
+.info_nosotros{
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+
+.info-bloque1, .info-bloque2{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    && .container-caracteristica{
+        padding : 0    
+    }
+
+
+    && h1{
+        width: 100%;
+        font-family: var(--raleway);
+        text-align: left;
+        font-weight: 400;
+        font-size: 45px;
+    }
+}
+
+.container-info{
+    width: 380px;
+    height:320px;
+    background-color:var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    
     && h2{
-    font-size: 35px;
+        font-size:32px;
+        font-weight: 200;
+    }
+
+    && h2, p{
+        font-family: var(--raleway);
+        width: 90%;
+        
+    }
+
+}
+
+.info-texto{
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 400;
+}
+
+.info-bloque2{
+    && img{
+        width: 90%;
+        height: 60%;
+        border-radius: 30px;
+    }
+
+    && p{
+         text-align:left;
+         width: 90%;
+         padding-left: 20px;
+         line-height: 2;
+         margin-top: 30px;
+         font-weight: 500;
     }
 }

@@ -13,8 +13,8 @@ export const Caracteristica = (props) => {
     }
   return (
     <div className={determinarIndex(props.index)}>
-        <h2>Titulo {props.titulo}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolore quos nemo suscipit? Voluptate, minima id libero atque nemo quo</p>
+        <h2>{props.titulo}</h2>
+        <p>{props.texto}</p>
     </div>
   )
 }
