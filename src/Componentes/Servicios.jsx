@@ -29,7 +29,7 @@ export const Servicios = () => {
             <IntersectionObserver onIntersect={handleIntersect}
       threshold={0.2}>
             <div className='tiposdeservicios'>
-                <h1 className={isVisible && 'tituloservicios-animado'}>Servicios de construcción, mantenimiento y remodelación</h1>
+                <h1->Servicios de construcción, mantenimiento y remodelación</h1->
                 <p className={isVisible && 'textoservicios-animado'}>Empresa ofrece ingeniería mecánica, eléctrica y plomería para todo tipo de edificaciones, instalaciones de transporte y proyectos industriales de acuerdo a los requerimientos específicos de nuestros clientes.</p>
                 <div className={isVisible ? 'container-tiposdeservicios tipodeserviciosanimado' : 'container-tiposdeservicios'}>
                     {listaServicios.map((servicio, index) => (
