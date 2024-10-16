@@ -81,7 +81,7 @@
     to{filter: opacity(1); transform: translateX(0);}
 }
 
-@media (max-width: 450px){
+@media (max-width: 500px){
     .container-portada{
         padding: 0 35px;
         height: 1000px;
