@@ -84,16 +84,17 @@
 
 @media (max-width: 450px){
     .container-portada{
-        padding: 50px 35px;
         height: 1000px;
     }
     .textoimagen{
         flex-direction: column;
         width: 100%;
+        height: 100%;
         justify-content: flex-end;
         
     }
     .portada-texto{
+        padding: 0 35px;
         width: 100%;
         justify-content: center;
         gap: 30px;
