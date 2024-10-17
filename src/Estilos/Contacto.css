@@ -9,6 +9,7 @@
   background-position: 50% 50%;
   background-size: cover;
   color: white;
+  overflow: hidden;
 
   && h1 {
     font-size: 50px;
