@@ -113,6 +113,7 @@
         font-family: var(--raleway);
         color: white;
         font-weight: 200;
+        transform: scale(0);
     }
 
     && h1{
@@ -128,6 +129,15 @@
         font-weight: 500;
         font-style: italic;
     }
+}
+
+.zoomear{
+    animation: zoomear 1s ease-out forwards;
+}
+
+@keyframes zoomear {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
 }
 
 .container-especializaciones{
