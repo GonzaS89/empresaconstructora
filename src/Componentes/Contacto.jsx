@@ -36,20 +36,20 @@ export const Contacto = () => {
         <form action="" className="contacto-form">
             <div className="mail-nombre">
               <div className="mail">
-                <label htmlFor="">Email</label>
+                <label>Email</label>
                 <input type="text" placeholder='Dejanos tu mail' className='input-mail-nombre'/>
               </div>
               <div className="nombre">
-                <label htmlFor="">Nombre</label>
+                <label>Nombre</label>
                 <input type="text" placeholder='Dejanos tu nombre' className='input-mail-nombre'/>
               </div>
             </div>
             <div className="direccion">
-              <label htmlFor="">Dirección</label>
+              <label>Dirección</label>
               <input type="text" placeholder='Ingresá tu dirección' className='input-direccion'/>
             </div>
             <div className="cuadromensaje">
-              <label htmlFor="">Mensaje</label>
+              <label>Mensaje</label>
               <textarea name="" id="" className='cuadrodemensaje' placeholder='Dejanos tu mensaje'></textarea>
             </div>
             <button className = "botonform">Enviar</button>

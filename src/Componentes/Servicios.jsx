@@ -1,13 +1,16 @@
-import React , {useState} from 'react';
+import React, { useRef } from 'react';
 import '../Estilos/Servicios.css';
 import { Servicio } from '../Minicomponentes/Servicio';
-import IntersectionObserver from '../IntersectionObserver';
+import useIntersectionObserver from './Observador';
+
 
 export const Servicios = () => {
 
-    const [isVisible, setIsVisible] = useState(false);
 
-    const handleIntersect = ()=> {setIsVisible(true)}
+        const elementoRef = useRef(null) // Referencia al elemento que será observado
+        const isVisible = useIntersectionObserver(elementoRef, { threshold: 0.2 });   
+
+    
     const listaServicios = [
         {
             "nombre": "Servicios de construcción",
@@ -26,18 +29,16 @@ export const Servicios = () => {
     return (
 
         <div className='container-servicios'>
-            <IntersectionObserver onIntersect={handleIntersect}
-      threshold={0.2}>
-            <div className='tiposdeservicios'>
-                <h1->Servicios de construcción, mantenimiento y remodelación</h1->
-                <p className={isVisible && 'textoservicios-animado'}>Empresa ofrece ingeniería mecánica, eléctrica y plomería para todo tipo de edificaciones, instalaciones de transporte y proyectos industriales de acuerdo a los requerimientos específicos de nuestros clientes.</p>
-                <div className={isVisible ? 'container-tiposdeservicios tipodeserviciosanimado' : 'container-tiposdeservicios'}>
+            <div className='tiposdeservicios' ref={elementoRef}>
+                <h1 className={isVisible ? 'titulo-servicios tituloservicios-animado' : 'titulo-servicios animacionocultar'}>Servicios de construcción, mantenimiento y remodelación</h1>
+                <p className={isVisible ? 'texto-servicio_heading textoservicios-animado' : 'texto-servicio_heading ocultar_textoheading'}>Empresa ofrece ingeniería mecánica, eléctrica y plomería para todo tipo de edificaciones, instalaciones de transporte y proyectos industriales de acuerdo a los requerimientos específicos de nuestros clientes.</p>
+                <div className={isVisible ? 'container-tiposdeservicios tipodeserviciosanimado' : 'container-tiposdeservicios ocultar_containerservicios'}>
                     {listaServicios.map((servicio, index) => (
                         <Servicio nombre={servicio.nombre} img={servicio.img} />
                     ))}
                 </div>
             </div>
-            </IntersectionObserver>
+            
             <div className="container-masservicios">
                 <div className="container-servicios_texto">
                     <div className='titulo-info'>

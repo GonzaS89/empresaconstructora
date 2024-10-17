@@ -1,18 +1,22 @@
-import React from 'react';
+import React ,{useRef}from 'react';
 import '../Estilos/Nosotros.css';
 import { Caracteristica } from '../Minicomponentes/Caracteristica';
+import useIntersectionObserver from './Observador';
 
 export const Nosotros = () => {
+
+  const elementoRef = useRef(null) // Referencia al elemento que será observado
+  const isVisible = useIntersectionObserver(elementoRef, { threshold: 0.1 }); 
 
   const lista = [1,2,3,4]
 
   return (
-    <div className='container-nosotros'>
+    <div className='container-nosotros' ref={elementoRef}>
       <div className="nosotros-caracteristicas">
         <div className="container-caracteristicas">
           <div className="caracteristicas">
             {lista.map ( (item,index) => (
-              <Caracteristica index = {index} titulo = {index + 1} texto = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'}/>
+              <Caracteristica index = {index} titulo = {index + 1} texto = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'} visible = {isVisible}/>
             ))}
           </div>
         </div>

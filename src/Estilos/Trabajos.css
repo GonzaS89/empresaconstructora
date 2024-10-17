@@ -17,8 +17,20 @@
         font-size:50px;
         font-family: var(--raleway);
         font-weight: 300;
+        filter: opacity(0);
+
     }
 }
+
+.mostrartitulotrabajos{
+    animation: mostrartitulotrabajos 1s ease-in-out forwards;
+}
+
+@keyframes mostrartitulotrabajos {
+    from{filter: opacity(0); transform: scale(0)}
+    to{filter: opacity(1); transform: scale(1)}
+}
+
 
 .tiposdetrabajo{
     height: 90%;
@@ -31,14 +43,35 @@
 .img-trabajo{
     width: 650px;
     height: 650px;
-    border-radius:50%
+    border-radius:50%;
+    filter: opacity(0);
+}
+
+.mostrarimgtrabajos{
+    animation: mostrarimgtrabajos 1s ease-in-out forwards;
+}
+
+@keyframes mostrarimgtrabajos{
+    from{transform:scale(0) translateX(-500px) rotate(0deg);filter: opacity(0);}
+    to{transform:scale(1) translateX(0) rotate(360deg); filter: opacity(1);}
 }
 
 .listatrabajos{
     display: flex;
     flex-direction: column;
     gap: 50px;
+    filter: opacity(0);
 }
+
+.mostrarlistatrabajos{
+    animation: mostrarlistatrabajos 1s ease-in-out forwards;
+}
+
+@keyframes mostrarlistatrabajos{
+    from{filter: opacity(0); transform: translateX(100%)}
+    to{filter: opacity(1); transform: translateX(0)}
+}
+
 
 .container-trabajo{
     display: flex;
@@ -172,4 +205,60 @@
     color: #5f567a !important;
     font-size: 35px;
     font-weight: 800;
+}
+
+@media(max-width: 450px){
+    .container-trabajosterminados{
+        padding: 50px 30px;
+
+        && h1{
+            font-size: 35px;
+        }
+    }
+
+    .tiposdetrabajo{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .img-trabajo{
+        width: 100%;
+        height: 350px;
+    }
+
+    .container-trabajo{
+        width: 100%;
+    }
+
+    .container-quehacemos{
+        padding: 50px 30px;
+        && h1{
+            font-size: 35px;
+        }
+
+        && h3{
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+
+    .container-especializaciones{
+        flex-direction: column;
+    }
+
+    .container-servicioscompletos{
+        padding: 50px 30px;
+        height: auto;
+        gap: 50px;
+        && h1{
+            font-size: 35px;
+        }
+    }
+
+    .datos-servicioscompletados{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+    }
 }

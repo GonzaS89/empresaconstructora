@@ -15,27 +15,44 @@
     background-color: var(--purple);
     color: white;
     height:800px;
-    
+} 
 
-    && h1{
-        font-size:50px;
+.titulo-servicios{
+    font-size:50px;
         font-family: var(--raleway);
         width: 50%;
         text-align: center;
         font-weight: 400;
-        filter: opacity(0);
-    }
+        filter: opacity(0)
+}
 
-    && p{
-        font-size: 25px;
+.texto-servicio_heading{
+    font-size: 25px;
         width: 60%;
         line-height: 2;
         font-family: var(--openSans);
         font-weight:100;
         font-style: italic;
-        filter: opacity(0);
-    }
-}  
+        filter: opacity(0)
+}
+
+.animacionocultar{
+    animation: ocultarTitulo 1s ease-out forwards;
+}
+
+@keyframes ocultarTitulo {
+    from{filter: opacity(1); transform: scale(1);}
+    to{filter: opacity(0); transform: scale(0);}
+}
+
+.ocultar_texto_heading{
+    animation: ocultartextoheading 1s ease-out forwards;
+}
+
+@keyframes ocultartextoheading {
+    from{filter: opacity(1); transform: scale(1);}
+    to{filter: opacity(0); transform: scale(0);}
+}
 
 .titulo-tiposervicios,.texto-tiposervicios{
     filter: opacity(1);
@@ -59,11 +76,6 @@
     to{filter: opacity(1); transform: scale(1);}
 }
 
-.visible{
-    filter: opacity(1);
-}
-
-
 
 .container-tiposdeservicios{
     width: 70%;
@@ -74,12 +86,21 @@
 }
 
 .tipodeserviciosanimado{
-    animation: serviciosanimados 1s 1s ease-out forwards;
+    animation: serviciosanimados 1s .5s ease-out forwards;
 }
 
 @keyframes serviciosanimados {
     from{filter: opacity(0); transform: translateY(100%);}
     to{filter: opacity(1); transform: translateY(0);}
+}
+
+.ocultar_containerservicios{
+    animation: ocultar_containerservicios 1s ease-out forwards;
+}
+
+@keyframes ocultar_containerservicios {
+    from{filter: opacity(1); transform: translateY(0);}
+    to{filter: opacity(0); transform: translateY(100%);}
 }
 
 
@@ -98,7 +119,6 @@
         font-size:15px;
         width: 85%;
         font-weight:400;
-        filter: opacity(1);
     }
     && h2{
         font-family: var(--raleway);
@@ -132,7 +152,6 @@
 
 .titulo-info{
     margin-top: 50px;
-    filter: opacity(0);
     && h1{
         font-size: 50px;
         font-family: var(--raleway);
@@ -148,6 +167,25 @@
         margin-top: 30px;
     }
 }
+
+.ocultar-container-masservicios{
+    animation: ocultar-containermasservicios .5s ease-in-out forwards;
+}
+
+@keyframes ocultar-containermasservicios{
+    from {filter: opacity(1); transform:translateX(0)}
+    to {filter: opacity(0); transform:translateX(100%)}
+}
+
+.mostrar-containermasservicios{
+    animation: mostrar-containermasservicio 1s ease-in-out forwards;
+}
+
+@keyframes mostrar-containermasservicio{
+    from {filter: opacity(0); transform:translateX(100%)}
+    to {filter: opacity(1); transform:translateX(0)}
+}
+
 
 .servicio-texto{
     margin-top: 50px;
@@ -186,7 +224,6 @@
 }
 
 .listadeservicios{
-    filter: opacity(0);
     && p{
         font-weight: 400;
     }
@@ -214,5 +251,87 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    filter: opacity(0);
+}
+
+@media(max-width: 450px){
+    .tiposdeservicios{
+        padding: 50px 35px;
+        height: auto;
+        && h1 {
+            font-size: 35px;
+            width: 100%;
+        }
+
+        && p{
+            font-size: 15px;
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+
+    .container-tiposdeservicios{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container-servicio{
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+        padding: 20px 20px;
+        gap: 20px;
+
+        && p{
+            margin: 0;
+        }
+    }
+
+    .container-masservicios{
+        padding: 50px 35px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .container-servicios_texto{
+        width: 100%;
+    }
+
+    .titulo-info{
+        width: 100%;
+        && h1{
+            font-size: 40px;
+        }
+
+        && p{
+            font-size: 20px;
+            width: 100%;
+        }
+    }
+
+    .servicio-texto{
+        && h3{
+            font-size: 25px;
+        }
+
+        && p{
+            font-size: 18px;
+        }
+    }
+
+    .listadeservicios{
+        width: 100%;
+        && ul{
+            width: 100%;
+        }
+
+        && li{
+            width: 100%;
+            text-align: justify;
+        }
+    }
+
+    .container-botones_info{
+        width: auto;
+        margin-top: 20px;
+    }
 }

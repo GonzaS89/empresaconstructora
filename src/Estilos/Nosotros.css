@@ -7,6 +7,8 @@
     background-size: cover;
     background-position: 50% 50%;
     align-items: center;
+    overflow: hidden;
+    
 }
 
 .container-caracteristicas{
@@ -33,6 +35,7 @@
     font-family: var(--openSans);
     text-align: left;
     padding: 30px 0 0 30px;
+    filter: opacity(0);
 
     && h2{
         font-size: 25px;
@@ -42,6 +45,78 @@
         line-height: 1.5;
         width: 95%;
     }
+}
+
+.mostrar-caracteup {
+    animation: mostrar-caracteup 1s ease-in-out forwards;
+}
+
+@keyframes mostrar-caracteup{
+    from{filter: opacity(0); transform: translateY(-100%)}
+    to{filter: opacity(1); transform: translateY(0)}
+}
+
+.ocultar-caracteup {
+    animation: ocultar-caracteup 1s ease-in-out forwards;
+}
+
+@keyframes ocultar-caracteizq{
+    from{filter: opacity(1); transform: translateY(0)}
+    to{filter: opacity(0); transform: translateY(-100%)}
+}
+
+.mostrar-caracteright {
+    animation: mostrar-caracteright 1s ease-in-out forwards;
+}
+
+@keyframes mostrar-caracteright{
+    from{filter: opacity(0); transform: translateX(100%)}
+    to{filter: opacity(1); transform: translateY(0)}
+}
+
+.ocultar-caracteright {
+    animation: ocultar-caracteright 1s ease-in-out forwards;
+}
+
+@keyframes ocultar-caracteright{
+    from{filter: opacity(1); transform: translateX(0)}
+    to{filter: opacity(0); transform: translateX(100%)}
+}
+
+.mostrar-caracteleft {
+    animation: mostrar-caracteleft 1s ease-in-out forwards;
+}
+
+@keyframes mostrar-caracteleft{
+    from{filter: opacity(0); transform: translateX(-100%)}
+    to{filter: opacity(1); transform: translateY(0)}
+}
+
+.ocultar-caracteright {
+    animation: ocultar-caracteleft 1s ease-in-out forwards;
+}
+
+@keyframes ocultar-caracteleft{
+    from{filter: opacity(1); transform: translateX(0)}
+    to{filter: opacity(0); transform: translateX(-100%)}
+}
+
+.mostrar-caractedown {
+    animation: mostrar-caractedown 1s ease-in-out forwards;
+}
+
+@keyframes mostrar-caractedown{
+    from{filter: opacity(0); transform: translateY(100%)}
+    to{filter: opacity(1); transform: translateY(0)}
+}
+
+.ocultar-caracteright {
+    animation: ocultar-caractedown 1s ease-in-out forwards;
+}
+
+@keyframes ocultar-caractedown{
+    from{filter: opacity(1); transform: translateY(0)}
+    to{filter: opacity(0); transform: translateY(100%)}
 }
 
 .fondomorado{
@@ -128,5 +203,69 @@
          line-height: 2;
          margin-top: 30px;
          font-weight: 500;
+    }
+}
+
+@media (max-width: 450px){
+
+    .nosotros-caracteristicas{
+        padding: 50px 35px;
+        height: auto;
+    }
+    .container-caracteristicas{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container-caracteristica{
+        width: 100%;
+    }
+
+    .caracteristicas{
+        grid-template-columns: 1fr;
+    }
+
+    .container-mascaracteristicas{
+        height: auto;
+        padding: 50px 40px;
+    }
+
+    .info_nosotros{
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .info-bloque1, .info-bloque2{
+        width: 100%;
+    }
+
+    .info-bloque1{
+        align-items: center;
+        gap: 50px;
+        && h1{
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+
+    .container-info{
+        width: 100%;
+        && h2{
+            font-size: 25px;
+        }
+    }
+
+    .info-bloque2{
+        align-items: center;
+
+        && img{
+            width: 100%;
+        }
+
+        && p{
+            width: 100%;
+            padding-left: 0;
+        }
     }
 }
