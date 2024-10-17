@@ -2,27 +2,28 @@
     width: 100%;
     height: 600px;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
 }
 
 .textoimagen{
     display: flex;
-    justify-content: space-between;
-    align-items: end;
+    justify-content: space-between;;
     width: 65%;
-    height: 100%;
+    height: 90%;
+    bottom: 0;
+    height: 80%;
+    align-items: end;
+
 }
 
 .portada-imagenes{
     display: flex;
     background-image:url(https://images03.nicepagecdn.com/c461c07a441a5d220e8feb1a/ac25187c1a485aec9c28f792/v.jpg?version=);
     flex-basis: 50%;
-    height:90%;
-    background-size: cover;
+    height:100%;
     position: relative;
+    background-size: cover;
     filter: opacity(0);
     animation: entraredificios 1s ease-out forwards;
 }
@@ -51,12 +52,12 @@
 
 .portada-texto{
     display: flex;
-    align-items:flex-start;
-    justify-content: space-evenly;
     flex-direction: column;
     flex-basis: 50%;
     text-align: left;
-
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-around;
     && h1{
         width: 60%;
         font-size: 50px;
