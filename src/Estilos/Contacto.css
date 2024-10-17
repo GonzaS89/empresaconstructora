@@ -38,6 +38,25 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    filter: opacity(0);
+}
+
+.entrardesdeizquierda{
+    animation: entrardesdeizquierda 1s ease-out forwards;
+}
+
+@keyframes entrardesdeizquierda{
+    from{filter: opacity(0); transform: translateX(-100%);}
+    to{filter: opacity(1); transform: translateX(0);}
+}
+
+.entrardesdederecha {
+    animation: entrardesdederecha 1s ease-out forwards;
+}
+
+@keyframes entrardesdederecha {
+    from{filter: opacity(0); transform: translateX(100%);}
+    to{filter: opacity(1); transform: translateX(0);}
 }
 
 .info-contacto{

@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../Estilos/Contacto.css';
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
+import useIntersectionObserver from './Observador';
 
 
 export const Contacto = () => {
+
+  const elementoRef = useRef(null);
+  const isVisible = useIntersectionObserver(elementoRef, {threshold : 0.1})
+
   return (
-    <div className="container-contacto">
+    <div className="container-contacto" ref={elementoRef}>
         <h1>Contactános</h1>
         <div className="container-datos-formulario">
-        <div className="contacto-info">
+        <div className={isVisible ? 'contacto-info entrardesdeizquierda' : 'contacto-info'}>
           <div className="minicontainer-info">
           <div className="info-contacto">
             <FaPhoneAlt className='icono-contacto'/>
@@ -33,7 +38,7 @@ export const Contacto = () => {
           <p>Lunes-Viernes: 08:00 a 18:00 <br />Sábados : 08:00 a 12:00</p>
             </div>
         </div>
-        <form action="" className="contacto-form">
+        <form action="" className={isVisible ? 'contacto-form entrardesdederecha' : 'contacto-form'}>
             <div className="mail-nombre">
               <div className="mail">
                 <label>Email</label>
