@@ -9,7 +9,7 @@ import useIntersectionObserver from './Observador';
 export const Contacto = () => {
 
   const elementoRef = useRef(null);
-  const isVisible = useIntersectionObserver(elementoRef, {threshold : 0.1})
+  const isVisible = useIntersectionObserver(elementoRef, {threshold : 0.1});
 
   return (
     <div className="container-contacto" ref={elementoRef}>

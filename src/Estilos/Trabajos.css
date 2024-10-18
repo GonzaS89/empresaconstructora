@@ -176,18 +176,20 @@
     justify-content:space-around;
     align-items: center;
     height: 500px;
+    width: 1000px;
+    margin: 0 auto;
 
     && h1{
         font-family: var(--raleway);
         font-weight: 400;
-        font-size: 50px;
+        font-size: 45px;
     }
 }
 
 .datos-servicioscompletados{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
 }
 
 .serviciocompletado{
@@ -218,6 +220,32 @@
     font-weight: 800;
 }
 
+@media (max-width: 768px) {
+    .tiposdetrabajo{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container-quehacemos{
+        && h3{width: 75%;}
+    }
+
+    .container-especializaciones{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-servicioscompletos{
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+    }
+
+    .datos-servicioscompletados{
+        width: 100%
+    }
+}
+
 @media(max-width: 450px){
     .container-trabajosterminados{
         padding: 50px 30px;
@@ -225,11 +253,6 @@
         && h1{
             font-size: 35px;
         }
-    }
-
-    .tiposdetrabajo{
-        flex-direction: column;
-        width: 100%;
     }
 
     .img-trabajo{
@@ -254,6 +277,7 @@
     }
 
     .container-especializaciones{
+        display: flex;
         flex-direction: column;
     }
 
